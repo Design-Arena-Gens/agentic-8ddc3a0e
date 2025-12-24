@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <button class="nav-icon active">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+            </button>
+            <button class="nav-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+            </button>
+            <button class="nav-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+            </button>
+            <button class="nav-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20M2 12h20"></path>
+                </svg>
+            </button>
+        </nav>
+        <div class="sidebar-profile">
+            <div class="profile-avatar"></div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Section -->
+        <section class="top-section">
+            <!-- Main Weather Card -->
+            <article class="weather-main">
+                <div class="weather-location">
+                    <svg class="location-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span>San Francisco, CA</span>
+                </div>
+                <div class="weather-temp-wrapper">
+                    <div class="weather-icon-large">
+                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                            <circle cx="60" cy="45" r="20" fill="rgba(100, 150, 255, 0.3)"/>
+                            <path d="M35 60 Q40 55, 45 60 T55 60 T65 60 T75 60 T85 60" stroke="rgba(100, 150, 255, 0.6)" stroke-width="3" fill="none"/>
+                            <line x1="50" y1="70" x2="48" y2="85" stroke="rgba(100, 200, 255, 0.8)" stroke-width="2"/>
+                            <line x1="58" y1="72" x2="56" y2="87" stroke="rgba(100, 200, 255, 0.8)" stroke-width="2"/>
+                            <line x1="66" y1="70" x2="64" y2="85" stroke="rgba(100, 200, 255, 0.8)" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="weather-temp">
+                        <span class="temp-value">28</span>
+                        <span class="temp-unit">°C</span>
+                    </div>
+                </div>
+                <div class="weather-info">
+                    <time class="weather-date">Monday, 15 March</time>
+                    <p class="weather-description">Partly cloudy with light rain</p>
+                </div>
+            </article>
+
+            <!-- Metrics Grid -->
+            <div class="metrics-grid">
+                <!-- Wind Status -->
+                <article class="metric-card">
+                    <h3 class="metric-title">Wind Status</h3>
+                    <div class="metric-value">
+                        <span class="value-large">12.5</span>
+                        <span class="value-unit">km/h</span>
+                    </div>
+                    <div class="wind-graph">
+                        <div class="wind-line"></div>
+                    </div>
+                </article>
+
+                <!-- UV Index -->
+                <article class="metric-card">
+                    <h3 class="metric-title">UV Index</h3>
+                    <div class="metric-value">
+                        <span class="value-large">4</span>
+                        <span class="value-unit">Moderate</span>
+                    </div>
+                    <div class="uv-gauge">
+                        <div class="uv-fill"></div>
+                        <div class="uv-indicator"></div>
+                    </div>
+                </article>
+
+                <!-- Sunrise & Sunset -->
+                <article class="metric-card">
+                    <h3 class="metric-title">Sunrise & Sunset</h3>
+                    <div class="sun-times">
+                        <div class="sun-time">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 18a5 5 0 0 0-10 0"></path>
+                                <line x1="12" y1="2" x2="12" y2="9"></line>
+                                <line x1="4.22" y1="10.22" x2="5.64" y2="11.64"></line>
+                                <line x1="1" y1="18" x2="3" y2="18"></line>
+                                <line x1="21" y1="18" x2="23" y2="18"></line>
+                                <line x1="18.36" y1="11.64" x2="19.78" y2="10.22"></line>
+                            </svg>
+                            <span>6:20 AM</span>
+                        </div>
+                        <div class="sun-arc">
+                            <div class="arc-track"></div>
+                            <div class="arc-indicator"></div>
+                        </div>
+                        <div class="sun-time">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 18a5 5 0 0 0-10 0"></path>
+                                <line x1="12" y1="9" x2="12" y2="2"></line>
+                                <line x1="4.22" y1="10.22" x2="5.64" y2="11.64"></line>
+                                <line x1="1" y1="18" x2="3" y2="18"></line>
+                                <line x1="21" y1="18" x2="23" y2="18"></line>
+                                <line x1="18.36" y1="11.64" x2="19.78" y2="10.22"></line>
+                            </svg>
+                            <span>7:42 PM</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Humidity -->
+                <article class="metric-card">
+                    <h3 class="metric-title">Humidity</h3>
+                    <div class="metric-value">
+                        <span class="value-large">68</span>
+                        <span class="value-unit">%</span>
+                    </div>
+                    <div class="humidity-bar">
+                        <div class="humidity-fill"></div>
+                    </div>
+                    <p class="metric-status">Normal</p>
+                </article>
+
+                <!-- Visibility -->
+                <article class="metric-card">
+                    <h3 class="metric-title">Visibility</h3>
+                    <div class="metric-value">
+                        <span class="value-large">8.2</span>
+                        <span class="value-unit">km</span>
+                    </div>
+                    <div class="visibility-indicator">
+                        <div class="vis-rings"></div>
+                    </div>
+                </article>
+
+                <!-- Feels Like -->
+                <article class="metric-card">
+                    <h3 class="metric-title">Feels Like</h3>
+                    <div class="metric-value">
+                        <span class="value-large">26</span>
+                        <span class="value-unit">°C</span>
+                    </div>
+                    <div class="feels-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="30" r="15" stroke="rgba(100, 200, 255, 0.5)" stroke-width="2"/>
+                            <line x1="30" y1="10" x2="30" y2="15" stroke="rgba(100, 200, 255, 0.5)" stroke-width="2"/>
+                            <line x1="30" y1="45" x2="30" y2="50" stroke="rgba(100, 200, 255, 0.5)" stroke-width="2"/>
+                            <line x1="10" y1="30" x2="15" y2="30" stroke="rgba(100, 200, 255, 0.5)" stroke-width="2"/>
+                            <line x1="45" y1="30" x2="50" y2="30" stroke="rgba(100, 200, 255, 0.5)" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Bottom Section -->
+        <section class="bottom-section">
+            <!-- 7-Day Forecast -->
+            <article class="forecast-card">
+                <h2 class="section-title">7-Day Forecast</h2>
+                <div class="forecast-list">
+                    <div class="forecast-item">
+                        <span class="forecast-day">Monday</span>
+                        <svg class="forecast-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="8" fill="rgba(255, 200, 100, 0.8)"/>
+                        </svg>
+                        <div class="forecast-temps">
+                            <span class="temp-high">28°</span>
+                            <span class="temp-low">18°</span>
+                        </div>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="forecast-day">Tuesday</span>
+                        <svg class="forecast-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="14" r="6" fill="rgba(100, 150, 255, 0.6)"/>
+                            <path d="M8 20 Q12 18, 16 20 T24 20" stroke="rgba(100, 150, 255, 0.6)" stroke-width="2" fill="none"/>
+                        </svg>
+                        <div class="forecast-temps">
+                            <span class="temp-high">26°</span>
+                            <span class="temp-low">17°</span>
+                        </div>
+                    </div>
+                    <div class="forecast-item active">
+                        <span class="forecast-day">Wednesday</span>
+                        <svg class="forecast-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="14" r="6" fill="rgba(100, 150, 255, 0.6)"/>
+                            <line x1="13" y1="22" x2="12" y2="27" stroke="rgba(100, 200, 255, 0.8)" stroke-width="1.5"/>
+                            <line x1="16" y1="23" x2="15" y2="28" stroke="rgba(100, 200, 255, 0.8)" stroke-width="1.5"/>
+                            <line x1="19" y1="22" x2="18" y2="27" stroke="rgba(100, 200, 255, 0.8)" stroke-width="1.5"/>
+                        </svg>
+                        <div class="forecast-temps">
+                            <span class="temp-high">24°</span>
+                            <span class="temp-low">16°</span>
+                        </div>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="forecast-day">Thursday</span>
+                        <svg class="forecast-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="8" fill="rgba(255, 200, 100, 0.8)"/>
+                            <circle cx="16" cy="14" r="5" fill="rgba(100, 150, 255, 0.5)"/>
+                        </svg>
+                        <div class="forecast-temps">
+                            <span class="temp-high">27°</span>
+                            <span class="temp-low">19°</span>
+                        </div>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="forecast-day">Friday</span>
+                        <svg class="forecast-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="8" fill="rgba(255, 200, 100, 0.8)"/>
+                        </svg>
+                        <div class="forecast-temps">
+                            <span class="temp-high">29°</span>
+                            <span class="temp-low">20°</span>
+                        </div>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="forecast-day">Saturday</span>
+                        <svg class="forecast-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="8" fill="rgba(255, 200, 100, 0.8)"/>
+                        </svg>
+                        <div class="forecast-temps">
+                            <span class="temp-high">31°</span>
+                            <span class="temp-low">21°</span>
+                        </div>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="forecast-day">Sunday</span>
+                        <svg class="forecast-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="14" r="6" fill="rgba(100, 150, 255, 0.6)"/>
+                            <path d="M8 20 Q12 18, 16 20 T24 20" stroke="rgba(100, 150, 255, 0.6)" stroke-width="2" fill="none"/>
+                        </svg>
+                        <div class="forecast-temps">
+                            <span class="temp-high">28°</span>
+                            <span class="temp-low">19°</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="forecast-graph">
+                    <svg width="100%" height="60" viewBox="0 0 400 60" preserveAspectRatio="none">
+                        <polyline points="0,40 60,35 120,30 180,25 240,30 300,35 360,40 400,38"
+                                  fill="none"
+                                  stroke="rgba(100, 200, 255, 0.4)"
+                                  stroke-width="2"/>
+                        <polyline points="0,40 60,35 120,30 180,25 240,30 300,35 360,40 400,38"
+                                  fill="url(#gradient)"
+                                  opacity="0.3"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgba(100, 200, 255, 0.4);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:rgba(100, 200, 255, 0);stop-opacity:0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </article>
+
+            <!-- Weather Map -->
+            <article class="map-card">
+                <div class="map-header">
+                    <h2 class="section-title">Weather Map</h2>
+                    <div class="map-controls">
+                        <button class="map-btn">+</button>
+                        <button class="map-btn">−</button>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <!-- Map Background -->
+                    <div class="map-bg">
+                        <div class="map-grid"></div>
+                        <div class="map-roads"></div>
+                    </div>
+
+                    <!-- Temperature Markers -->
+                    <div class="temp-marker" style="top: 25%; left: 20%;">
+                        <span>24°</span>
+                    </div>
+                    <div class="temp-marker" style="top: 40%; left: 45%;">
+                        <span>28°</span>
+                    </div>
+                    <div class="temp-marker active" style="top: 55%; left: 65%;">
+                        <span>26°</span>
+                    </div>
+                    <div class="temp-marker" style="top: 70%; left: 30%;">
+                        <span>22°</span>
+                    </div>
+
+                    <!-- Info Bubble -->
+                    <div class="map-info-bubble">
+                        <div class="bubble-location">Downtown</div>
+                        <div class="bubble-temp">28°C</div>
+                        <div class="bubble-condition">Partly Cloudy</div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
